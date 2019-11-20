@@ -22,22 +22,27 @@ int main()
         scanf("%f", &productos[x]);
 
         if(productos[x]>50)
+        {
             cont[0]++;
+            
+        }
 
-        if(productos[x]<20)
+        else if(productos[x]<20)
+        {
             cont[1]++;
+        }
 
-        if((productos[x]<50)&&(productos[x]>20))
+        else
+        {
             cont[2]++;
+        }
+            
                 
     }
-/*Impresion de Contadores
-    for(x=0;x<3;x++)
-        printf("Contador %d",cont[x]); */
 
     printf("\n\n\n El porcentaje de productos mayores a 50 es: %.2f",((float)cont[0]/20)*100);
     printf("\n El porcentaje de productos menores a 20 es: %.2f",((float)cont[1]/20)*100);
-    printf("\n El porcentaje de productos restantes es: %.2f",((float)cont[2]/20)*100);
+    printf("\n El porcentaje de productos restantes es: %.2f\n\n",((float)cont[2]/20)*100);
     
     
     return 0;
